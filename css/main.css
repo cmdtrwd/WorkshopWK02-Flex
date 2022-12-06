@@ -36,12 +36,12 @@
     width: 70%;
 }
 
-.right{
+.right {
     background: crimson;
     width: 30%;
 }
 
-.adjust-items{
+.adjust-items {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,21 +49,57 @@
     color: white;
 }
 
-.flex-outer-container{
+.flex-outer-container {
     display: flex;
-    flex-direction: row;  
-    gap: 8px;  
+    flex-direction: row;
+    gap: 8px;
     justify-content: center;
 }
 
-.flex-inner-container{
-    display: flex;   
+.flex-inner-container {
+    display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.red-box{
+.red-box {
     width: 100px;
     height: 100px;
     background-color: maroon;
+}
+
+#grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 50%;
+    grid-template-rows: 400px 200px;
+    grid-template-areas: 
+        "side right right"
+        "item3 right right";
+    gap: 8px;
+}
+
+#grid-container .item {
+    background-color: rgb(130, 176, 84);
+}
+
+.item1{
+    grid-area: side;
+}
+
+.item2{
+    grid-area: item2;
+}
+
+.item3{
+    grid-area: item3;
+}
+
+#grid-container .item4{
+    grid-area: right;
+    background-color: black;
+}
+
+.item5{
+    grid-area: item4;
 }
